@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Engine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/search.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-size: 100%;">
+    <nav>
+        <a href="./">COMIC CHARACTER</a>
+        <form method="GET" action="{{ url_for('search') }}">
+            <input type="text" class="form-control" name="keyword" value="{{keyword}}">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </nav>
+    <div class="container">
+        
+        {% if hits|length == 0 %}
+            <h2 id="nomatch"> Sorry, no matches found for <b>"{{keyword}}"</b> </h2>
+        {% else %}
+        {% for doc in hits %}
+            <div class="card mb-3" style="max-width: 1000px;">
+                <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{doc['Picture']}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ doc['name'] }}</h5>
+                    <div class="card-text"><p class="card-text">
+                        {% if doc['universe'] == 'DC'%}
+                            <b>Universe : </b><b style="color:rgb(24, 52, 180)">DC</b></br>
+                        {% else %}
+                            <b>Universe : </b><b style="color:red">Marvel</b></br>
+                        {% endif %}
+                        {% if doc['status'] == 'living characters'%}
+                            <b>Status : </b><b style="color:green">Alive</b></br>
+                        {% else %}
+                            <b>Status : </b><b style="color:red">Decreased</b></br>
+                        {% endif %}
+                        {% if doc['align'] == 'good characters'%}
+                            <b>Align : </b> <b style="color:green"> Good Character</b>  </br>
+                        {% elif doc['align'] == 'bad characters'%}
+                            <b>Align : </b> <b style="color:red"> Bad Character</b>  </br>
+                        {% else %}
+                            <b>Align : </b> <b style="color:rgb(92, 94, 92)"> Netural Character</b>  </br>
+                        {% endif %}
+                        {% if doc['gender'] == 'male characters'%}
+                            <b>Gender : </b><b style="color:rgb(6, 163, 215)">Male</b></br>
+                        {% elif doc['gender'] == 'female characters'%}
+                            <b>Gender : </b><b style="color:rgb(215, 6, 211)">Female</b></br>
+                        {% else %}
+                            <b>Align : </b> <b style="color:rgb(92, 94, 92)"> Genderfluid</b>  </br>
+                        {% endif %}
+                        <b>Description : </b>{{ doc['description'] }}</p></div>
+                    <p class="card-text"><small class="text-muted">Number of times appearance : {{ doc['appear'] }}</small></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            {{ doc['created'] }}
+            <hr>
+        {% endfor %}
+    </div>
+    <div aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_no!=1 %}
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page=1">First</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?keyword={{ keyword }}&page={{ page_no-1 }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_no-1 }}">{{ page_no-1 }}</a></li> 
+                {% endif %}
+                {% if page_total!=1 %}
+                <li class="page-item active"><a class="page-link " href="#">{{ page_no }}</a></li>
+                {% endif %}
+                {% if page_no<page_total %}
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_no+1 }}">{{ page_no+1 }}</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?keyword={{ keyword }}&page={{ page_no+1 }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_total }}">Last</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        {% endif %}
+    </body>
+</html>
