@@ -174,9 +174,7 @@ a{
     font-size: 2.5rem;
     margin: 0;
 }
-.page-4 .container img{
-   
-}
+
 @media (max-width: 540px) {
     .toggle-button {
         display: flex;
