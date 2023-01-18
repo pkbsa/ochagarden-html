@@ -218,6 +218,7 @@ a{
         margin-bottom: 3em;
     }
     .page-3 .width{
+        width: auto;
         margin-bottom: 2em;
     }
 }
