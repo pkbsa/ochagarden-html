@@ -96,7 +96,7 @@ a{
 .page-1 img{
     width: 100%;
     height: 15em;
-    object-fit: cover;
+    object-fit: contain;
 }
 .page-1 .flex-row-1{
     flex-direction: row;
