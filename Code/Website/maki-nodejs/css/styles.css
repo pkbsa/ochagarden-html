@@ -1,0 +1,442 @@
+/* *{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Volkhov', serif;
+} */
+
+/* PAGE HOME */
+#logo{
+    height: 70px;
+    margin-right: 0.5em;
+}
+#maki-cattery{
+    font-family: 'Inter', sans-serif;
+    font-weight: 'Extra-bold';
+    font-size: 28px;
+}
+.navbar{
+    padding: 2em 4.5em 2em 4.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: transparent!important;
+}
+.nav-item{
+    padding: 0em 2em;
+}
+.page-home{
+    min-height: 80vh;
+    background-image: url('assets/pagehome-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: right;
+}
+.container-fluid{
+    padding: 0;
+}
+.my-container{
+    margin: 2em 0em 2em 0em;
+    padding: 2em 5em;
+    width: 100%;
+}
+#above{
+    color: #DF6951;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Bold';
+    font-size: 1.5em;
+}
+#title{
+    font-family: 'Volkhov', serif;
+    font-weight: 'Bold';
+    font-size: 5em;
+    color: #181E4B;
+}
+#text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Medium';
+    font-size: 1em;
+    color: #5E6282;
+}
+#explore{
+    background-color: #8786C2;
+    padding: 1.5em 4em;
+    width: 250px;
+    border: #8786C2;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Kanit', sans-serif;
+
+    font-weight: 'Medium';
+}
+#maki{
+    color: #686D77;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Medium';
+}
+#cat{
+    width: 100%;
+}
+
+
+/* PAGE CATEGORY */
+
+.page-category, .page-showcase{
+    position: relative;
+    min-height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding : 2em 8em 2em 8em;
+    background-color: rgb(252, 252, 252);
+}
+#page-category-bg{
+    position: absolute;
+    width: 300px;
+    right: 2em;
+    z-index: 0;
+}
+#page-category-bg-2{
+    position: absolute;
+    width: 250px;
+    left: 2em;
+    z-index: 0;
+    top: 0;
+}
+#highlight-box{
+    background-image: url('assets/page-category-box.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+.head-page{
+    font-size: 1.3em;
+    position: relative;
+    z-index: 1;
+}
+.description-page{
+    font-family: 'Volkhov', serif;
+    font-weight: 'Bold';
+    font-size: 2.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.category-box{
+    background-color: rgb(255, 255, 255);
+    min-height: 300px;
+    margin: 2.5em;
+    border-radius: 30px;
+}
+.category-box img{
+    width: fit-content;
+    margin-top: 3em;
+}
+.category-box h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+
+}
+.category-box p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Medium';
+    font-size: 0.9em;
+    margin-bottom: 3em; 
+}
+
+.showcase-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    padding: 2em;
+}
+.showcase-row a{
+    margin: 1em;
+}
+.home-show .card{
+    margin: 1em;
+
+}
+.card{
+    height: 400px;
+    width: 300px!important;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    border: 0;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+
+}
+.card img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 300px!important;
+    max-height: 300px;
+    object-fit: cover;
+
+}
+a{
+    text-decoration: none;
+
+}
+.card-body{
+    max-height: 100px;
+}
+.card-body p, .card-body span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Medium';
+    font-size: 1em;
+    color: #5E6282;
+    margin: 0;
+}
+.bi-gender-male{
+    color: #03CDFA;
+}
+.bi-gender-female{
+    color: #FF03E6;
+}
+
+footer{
+    background-color: rgb(252, 252, 252);
+    min-height: 60vh;
+    background-image: url('assets/pagehome-footer.png');
+    background-size: contain;
+    background-repeat:  no-repeat ;
+    background-position-x: left;
+    background-position-y: bottom;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 'Medium';
+}
+.footer-container{
+    padding: 10em 10em;
+}
+.footer-title-1{
+    font-size: 3.5em;
+}
+.footer-title{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+#maki-footer{
+    padding: 0em!important;
+}
+#info{
+    display: flex;
+    height: auto;
+    align-items: center;
+    gap: 0.5em;
+}
+#info img{
+    height: 50px;
+}
+
+.contact{
+    padding: 2em 6em;
+}
+.contact a{
+    text-decoration: none;
+    color: black;
+}
+iframe{
+    height: 500px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+.contact-box{
+    background-color: whitesmoke;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.contact .col-4{
+    padding: 0;
+}
+@media screen and (max-width: 1500px) {
+    #title{
+        font-size: 3em!important;
+    }
+    #above{
+        font-size: 1.3em!important;
+    }
+    #text{
+        font-size: 0.8em!important;
+        padding-right: 2em;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .footer-container{
+        padding: 8em;
+    }
+    .col-lg-2{
+        margin-top: 2em;
+    }
+    .page-showcase{
+        padding: 1em;
+        padding-top: 3em;
+        justify-content: center;
+    }
+    .showcase-row{
+        margin-top: 1em;
+        align-items: center;
+        padding: 0;
+    }
+    .showcase-row .card{
+        align-content: center;
+        margin: 1.25em;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        padding: 1em!important;
+    }
+    #title{
+        font-size: 2.5em!important;
+    }
+    .description-page{
+     font-size: 2em;
+    }
+    .my-container{
+        padding: 2em 0em 2em 2em;
+    }
+    .my-container{
+        margin: 0;
+    }
+    .page-category{
+        padding: 1em;
+        padding-top: 3em;
+        margin-top: 3em;
+    }
+    .page-category .category-box{
+        margin: 2em;
+    }
+    #info{
+        margin: 0!important;
+        margin-top: 1em!important;
+    }
+    .map iframe{
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+    .contact-box{
+        border-radius: 30px;
+        padding: 1em;
+    }
+    .contact{
+        padding: 2em;
+    }
+}
+
+footer a{
+    color: black;
+}
+.card-login{
+    max-width: 700px;
+    padding: 2em;
+    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+    margin: auto;
+}
+.container-1{
+    background-color: rgb(249, 249, 249);
+    padding: 2em;
+    border-radius: 30px;
+}
+.image-preview{
+    width: 300px;
+    height: 300px;
+    border: 2px solid #dddd;
+    margin-bottom: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 218, 235);
+}
+.image-preview__image{
+    display: none;
+    width: 300px;
+    height: 300px;
+    object-fit: contain
+}
+.showcase-row .update button{
+    width: 300px!important;
+    margin: auto;
+    margin: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.carousel-item img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+.carousel{
+    background-color: rgba(255, 255, 255, 0.712);
+}
+.my-carousel{
+    background-color: rgba(255, 255, 255, 0.712);
+
+}
+.content-text{
+    position: relative;
+    padding: 3em 3em 3em 3em;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    background-color: rgba(255, 255, 255, 0.712);
+}
+#edit{
+    position: absolute;
+    margin: 1em;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 200px;
+}
+.img-fluid{
+    height: 50px;
+}
+#content-price{
+    display: flex;
+    width: 100%!important;
+    background-color: #FAFAFA;
+    color: #A791C4;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 0.3em;
+}
+#ask{
+    font-family: 'Kanit', sans-serif;
+    width: 250px;
+    height: 50px;
+    background-color: #d1d7f0;
+    color: #2f4eaa;
+    border: 2px solid #2f4eaa;
+}
+.txt, .txt2{
+    padding: 0em 1em 0em 1em;
+}
+.my-col a,.my-col .update{
+    margin: 0em;
+}
+.my-col{
+    margin-top: 2em;
+}
+.my-col .card{
+    margin: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.my-thumbnail button{
+    border: 0px;
+    background-color: transparent;
+}
+.map{
+    padding: 0;
+}
