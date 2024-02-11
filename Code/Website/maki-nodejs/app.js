@@ -11,11 +11,12 @@ const { request } = require("http");
 const { response } = require("express");
 
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "maki-cattery",
-});
+    host: 'db4free.net',
+    user:  'netgluayadmin',
+    password: 'netgluay',
+    database: 'netgluaydb'
+  });
+  
   
 connection.connect((error) => {
     if (error) console.log(error);
